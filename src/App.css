@@ -1,0 +1,102 @@
+:root {
+  --primary: #6c5ce7;
+  --primary-hover: #5b4bc4;
+  --secondary: #ff7675;
+  --background: #f8f9fa;
+  --text: #2d3436;
+  --success: #00b894;
+  --error: #d63031;
+  --warning: #fdcb6e;
+}
+
+.todo-list {
+  background: linear-gradient(145deg, #ffffff, #f1f3f5);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(108,92,231,0.1);
+}
+
+.title {
+  color: var(--primary);
+  text-shadow: 2px 2px 4px rgba(108,92,231,0.1);
+}
+
+.input {
+  border-color: #d1d8e0;
+  background: rgba(255,255,255,0.9);
+}
+
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(108,92,231,0.2);
+}
+
+.add-button {
+  background: linear-gradient(135deg, var(--primary), #8e7cf2);
+  box-shadow: 0 4px 6px rgba(108,92,231,0.2);
+}
+
+.add-button:hover {
+  background: linear-gradient(135deg, var(--primary-hover), #7b6ad9);
+  transform: translateY(-2px);
+}
+
+.todo-item {
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(208,216,224,0.3);
+}
+
+.checkbox {
+  border-color: var(--primary);
+  background: rgba(108,92,231,0.1);
+}
+
+.checkbox.checked {
+  background: var(--primary);
+}
+
+.todo-text {
+  color: var(--text);
+}
+
+.todo-item.completed .todo-text {
+  color: #7f8c8d;
+}
+
+.delete-button {
+  color: var(--error);
+  background: rgba(214,48,49,0.1);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-button:hover {
+  background: rgba(214,48,49,0.2);
+}
+
+/* Добавим анимацию добавления задачи */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-item {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Градиентный фон для всего приложения */
+body {
+  background: linear-gradient(135deg, #f8f9fa, #f1f3f5);
+  min-height: 100vh;
+  padding: 2rem;
+  margin: 0;
+}
