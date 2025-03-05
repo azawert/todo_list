@@ -31,6 +31,15 @@ export default function TodoList() {
     setItems(items.filter((item) => item.id !== id));
   };
 
+  const handleIsDoneToggle = (id: string) => {
+    setItems(
+      items
+        .map((item) => (item.id === id ? { ...item, isDone: !item.isDone } : item))
+        .sort((a, b) => (a.isDone === b.isDone ? 0 : a.isDone === true ? 1 : -1)),
+    );
+  };
+  console.log(items);
+
   return (
     <div className='todo-list'>
       <h1 className='title'>Todo app</h1>
@@ -49,8 +58,8 @@ export default function TodoList() {
 
       <div className='todos-container'>
         {items.map((item) => (
-          <div key={item.id} className={`todo-item ${item.isDone ? 'completed' : ''}`}>
-            <div className='checkbox-wrapper'>
+          <div key={item.id} className={`todo-item ${item.isDone === true ? 'completed' : ''}`}>
+            <div className='checkbox-wrapper' onClick={() => handleIsDoneToggle(item.id)}>
               <input type='checkbox' />
               <div className={`checkbox ${item.isDone ? 'checked' : ''}`}>
                 {item.isDone && (
@@ -64,6 +73,8 @@ export default function TodoList() {
             <button className='delete-button' onClick={() => handleDeleteTodo(item.id)}>
               ×
             </button>
+
+            <button className='edit-button'>Edit</button>
           </div>
         ))}
       </div>

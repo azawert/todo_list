@@ -12,27 +12,27 @@
 .todo-list {
   background: linear-gradient(145deg, #ffffff, #f1f3f5);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(108,92,231,0.1);
+  box-shadow: 0 10px 30px rgba(108, 92, 231, 0.1);
 }
 
 .title {
   color: var(--primary);
-  text-shadow: 2px 2px 4px rgba(108,92,231,0.1);
+  text-shadow: 2px 2px 4px rgba(108, 92, 231, 0.1);
 }
 
 .input {
   border-color: #d1d8e0;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(108,92,231,0.2);
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
 }
 
 .add-button {
   background: linear-gradient(135deg, var(--primary), #8e7cf2);
-  box-shadow: 0 4px 6px rgba(108,92,231,0.2);
+  box-shadow: 0 4px 6px rgba(108, 92, 231, 0.2);
 }
 
 .add-button:hover {
@@ -41,13 +41,13 @@
 }
 
 .todo-item {
-  background: rgba(255,255,255,0.95);
-  border: 1px solid rgba(208,216,224,0.3);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(208, 216, 224, 0.3);
 }
 
 .checkbox {
   border-color: var(--primary);
-  background: rgba(108,92,231,0.1);
+  background: rgba(108, 92, 231, 0.1);
 }
 
 .checkbox.checked {
@@ -60,11 +60,12 @@
 
 .todo-item.completed .todo-text {
   color: #7f8c8d;
+  text-decoration: line-through;
 }
 
 .delete-button {
   color: var(--error);
-  background: rgba(214,48,49,0.1);
+  background: rgba(214, 48, 49, 0.1);
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -74,7 +75,7 @@
 }
 
 .delete-button:hover {
-  background: rgba(214,48,49,0.2);
+  background: rgba(214, 48, 49, 0.2);
 }
 
 /* Добавим анимацию добавления задачи */
@@ -99,4 +100,10 @@ body {
   min-height: 100vh;
   padding: 2rem;
   margin: 0;
+}
+
+.edit-button {
+  color: #fdcb6e;
+  width: 40px;
+  font-size: 10px;
 }
